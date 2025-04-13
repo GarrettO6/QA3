@@ -1,7 +1,3 @@
-
-### I added the subject Finance to the quiz bowl since I only have 4 classes this semester
-
-
 # QA3
 #  Quiz Bowl Application
 
