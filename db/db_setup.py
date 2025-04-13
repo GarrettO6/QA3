@@ -10,7 +10,7 @@ COURSE_CATEGORIES = [
 ]
 
 def create_tables():
-    # Connect to the SQLite database (will create it if it doesn't exist)
+    # Connect to the SQLite database 
     conn = sqlite3.connect('quiz_bowl.db')
     cursor = conn.cursor()
 

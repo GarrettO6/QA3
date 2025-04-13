@@ -3,7 +3,7 @@ from tkinter import messagebox
 from admin.admin_dashboard import open_admin_dashboard  # Make sure this file exists next
 
 # Hardcoded admin credentials
-ADMIN_PASSWORD = "admin123"
+ADMIN_PASSWORD = "gClaryROX"
 
 def verify_password():
     entered = password_entry.get()

@@ -3,8 +3,8 @@ from tkinter import simpledialog, messagebox
 from admin.admin_dashboard import open_admin_dashboard
 from quiz.user_quiz import open_quiz_ui
 
-# Admin password (you can improve this by checking against a secure file or hashed password)
-ADMIN_PASSWORD = "admin123"
+# Admin password 
+ADMIN_PASSWORD = "gClaryROX"
 
 def open_main_window():
     root = tk.Tk()
