@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from admin_dashboard import open_admin_dashboard  # Make sure this file exists next
+from admin.admin_dashboard import open_admin_dashboard  # Make sure this file exists next
 
 # Hardcoded admin credentials
 ADMIN_PASSWORD = "admin123"

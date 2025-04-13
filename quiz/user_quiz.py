@@ -34,7 +34,7 @@ class QuizApp:
 
         table_name = COURSE_CATEGORIES[selected_category]
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"SELECT id, question, option_a, option_b, option_c, option_d, correct_option FROM {table_name}")
         self.questions = cursor.fetchall()

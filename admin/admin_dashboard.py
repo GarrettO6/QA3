@@ -1,7 +1,7 @@
 import tkinter as tk
-from add_question import open_add_question
-from view_questions import open_view_questions
-from edit_question import open_edit_question
+from admin.add_question import open_add_question
+from admin.view_questions import open_view_questions
+from admin.edit_question import open_edit_question
 
 
 def open_admin_dashboard():

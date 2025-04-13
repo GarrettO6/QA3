@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import sqlite3
-from add_question import COURSE_CATEGORIES
+from admin.add_question import COURSE_CATEGORIES
 
 def open_edit_question():
     window = tk.Tk()
@@ -36,7 +36,7 @@ def open_edit_question():
 
         question_listbox.delete(0, tk.END)
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"SELECT id, question FROM {current_table}")
         records = cursor.fetchall()
@@ -52,7 +52,7 @@ def open_edit_question():
             return
         selected_id = selection.split(":")[0].replace("ID", "").strip()
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"""
             SELECT question, option_a, option_b, option_c, option_d, correct_option
@@ -76,7 +76,7 @@ def open_edit_question():
             messagebox.showerror("Error", "All fields must be filled out.")
             return
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"""
             UPDATE {current_table}
@@ -97,7 +97,7 @@ def open_edit_question():
         if not confirm:
             return
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"DELETE FROM {current_table} WHERE id = ?", (selected_id,))
         conn.commit()

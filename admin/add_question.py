@@ -36,7 +36,7 @@ def open_add_question():
             messagebox.showerror("Error", "All fields are required.")
             return
 
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"""
             INSERT INTO {category} (question, option_a, option_b, option_c, option_d, correct_option)

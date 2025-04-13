@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import sqlite3
 
-from add_question import COURSE_CATEGORIES
+from admin.add_question import COURSE_CATEGORIES
 
 def open_view_questions():
     window = tk.Tk()
@@ -21,7 +21,7 @@ def open_view_questions():
         table = COURSE_CATEGORIES.get(category_var.get())
         if not table:
             return
-        conn = sqlite3.connect("database/quiz_bowl.db")
+        conn = sqlite3.connect("quiz_bowl.db")
         cursor = conn.cursor()
         cursor.execute(f"SELECT id, question FROM {table}")
         records = cursor.fetchall()
